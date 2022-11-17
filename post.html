@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/utilities.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Post One</title>
+  </head>
+  <body id="home">
+    <header class="hero blog">
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <span class="text-primary"
+            ><i class="fas fa-book-open"></i> Edge</span
+          >
+
+          Ledger
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h1>Blog</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="post">
+        <h2>Blog Post One</h2>
+        <p class="meta">
+          <i class="fas fa-user"></i> Posted by <strong> John Doe</strong> |
+          July 31 2022
+        </p>
+        <img src="images/blog/blog1.jpg" alt="" />
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+          iste consequatur saepe veniam molestiae! Soluta, eos. Cumque debitis
+          doloribus sapiente!
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+          veritatis blanditiis ea vero deserunt iure voluptatum. Asperiores
+          officiis quo doloribus reprehenderit deserunt, tempora quos eum optio.
+          Tempora quasi odio dicta odit. Itaque porro iusto sit tempora rerum ut
+          reprehenderit facilis rem maiores suscipit est unde molestiae eos quia
+          nisi assumenda natus perferendis molestias libero, expedita saepe,
+          vitae amet ex illum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla quo
+          soluta provident quod asperiores architecto. Eos vero cum mollitia
+          fugit, dolore dolorum distinctio praesentium ex. Porro ipsum veniam
+          saepe dolorem eos non, ullam asperiores, rem iure eum quae officia
+          itaque beatae explicabo nisi nobis quos recusandae voluptatem neque
+          illo! Sint!
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright &copy; 2022 Edgeledger</p>
+    </footer>
+    <script>
+      const navbar = document.getElementById("navbar");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
